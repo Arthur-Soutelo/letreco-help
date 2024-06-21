@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ensures the container takes up the full height of the viewport */
+}
+
+/* .pair_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    margin: 0 30px;
+    padding-top: 5px;
+} */
+
+.pair_container {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    margin: 0 30px;
+    padding-top: 5px;
+    width: 10px;
+    gap: 10px; /* Add space between rows (flex items) */
+}
+
+.button {
+    display: inline-block; /* Ensure buttons are inline-block or block */
+    padding-left: 5px;
+    margin-left: 0 30px;
+    /* Other button styles */
+}
+
+.pair_row{
+    padding-top: 5px;
+}
