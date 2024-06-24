@@ -106,14 +106,35 @@ def filter_5_letter_words(input_file, output_file):
     print(f"Filtered {len(five_letter_words)} five-letter words to '{output_file}'.")
 
 
+# def filter_words_with_letter_at_position(words, position_letter_pairs):
+#     filtered_words = []
+
+#     for word in words:
+#         for position, letter in position_letter_pairs:
+#             if len(word) > position and word[position] == letter:
+#                 filtered_words.append(word)
+#                 break
+
+#     print(f"Filtered {len(filtered_words)} words based on positions and letters.")
+
+#     if len(filtered_words) == 0:
+#         return words
+
+#     return filtered_words
+
+
 def filter_words_with_letter_at_position(words, position_letter_pairs):
     filtered_words = []
 
     for word in words:
+        matches_all = True
         for position, letter in position_letter_pairs:
-            if len(word) > position and word[position] == letter:
-                filtered_words.append(word)
+            if len(word) <= position or word[position] != letter:
+                matches_all = False
                 break
+
+        if matches_all:
+            filtered_words.append(word)
 
     print(f"Filtered {len(filtered_words)} words based on positions and letters.")
 
